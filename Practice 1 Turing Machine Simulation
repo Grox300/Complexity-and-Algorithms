@@ -1,0 +1,85 @@
+//LOAD AN EXAMPLE TO TRY
+//then load an input and click play
+// this code read the sintax a^n ,b^y ,c^j where j = n*y
+//this is where you can try this code out https://turingmachinesimulator.com/
+
+//Syntax:
+
+//-------CONFIGURATION
+name: M3
+init: q0
+accept: qn
+
+// Initial state
+q0 ,a
+q1 ,X ,>
+
+q1 ,a
+q1 ,a ,>
+
+// Set b to Y
+q1 ,b
+q2 ,Y ,>
+
+// Motion
+q2 ,b
+q2 ,b ,>
+
+q2 ,c
+q3,Z ,<
+
+q3 ,Z
+q3 ,Z ,<
+
+q3 ,b
+q3 ,b ,<
+
+q3 ,Y
+q4 ,Y ,>
+
+q4 ,b
+q2,Y ,>
+
+q2 ,Z
+q2 ,Z ,>
+
+q4 ,Z
+q5,Z ,<
+
+q5 ,Y
+q5 ,b ,<
+
+q5 ,a
+q5 ,a ,<
+
+q5 ,X
+q6,X ,>
+
+q6 ,a
+q1,X,>
+
+q6 ,b
+q7 ,Y ,>
+
+q7 ,Z
+q7 ,Z ,>
+
+q7 ,b
+q7 ,Y ,>
+
+q7 ,$
+qn, $ ,-
+
+
+
+// Motion to left
+
+// < = left
+// > = right
+// - = hold
+// use underscore for blank cells
+
+//States and symbols are case-sensitive
+
+//Load your code and click COMPILE.
+//or load an example (top-right).
